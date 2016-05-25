@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="EMPLOYEE")
+@Table(name="employee")
 public class Employee {
 	
 	// The @GeneratedValue annotation says that this value will be determined by the datasource, not by the code.
