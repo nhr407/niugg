@@ -1,8 +1,8 @@
-package net.ngg.example.dao;
+package net.ngg.example.dao.exercise;
 
 import java.util.List;
 
-import net.ngg.example.entity.Employee;
+import net.ngg.example.entity.exercise.Employee;
 
 public interface EmployeeDAO {
 	public void addEmployee(Employee employee);

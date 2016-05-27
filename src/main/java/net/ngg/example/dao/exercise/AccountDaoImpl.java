@@ -1,4 +1,4 @@
-package net.ngg.example.dao;
+package net.ngg.example.dao.exercise;
 
 
 import org.hibernate.Query;
@@ -6,7 +6,7 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-import net.ngg.example.entity.Account;
+import net.ngg.example.entity.exercise.Account;
 
 @Repository
 public class AccountDaoImpl implements AccountDAO {

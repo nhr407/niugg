@@ -1,4 +1,4 @@
-package net.ngg.example.entity;
+package net.ngg.example.entity.exercise;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

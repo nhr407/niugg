@@ -1,4 +1,4 @@
-package net.ngg.example.controller;
+package net.ngg.example.controller.exercise;
 
 import java.util.Map;
 
@@ -11,8 +11,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import net.ngg.example.entity.Employee;
-import net.ngg.example.service.EmployeeService;
+import net.ngg.example.entity.exercise.Employee;
+import net.ngg.example.service.exercise.EmployeeService;
 
 @Controller
 @RequestMapping(value="/example")
