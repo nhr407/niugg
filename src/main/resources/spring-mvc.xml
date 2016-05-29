@@ -14,7 +14,7 @@
 	<!-- 使用Annotation自动注册Bean,只扫描@Controller -->
 	<!-- use-default-filters="false". This will in effect disable automatic detection of classes annotated with @Component,
 		@Repository, @Service, or @Controller. -->
-	<context:component-scan base-package="net.ngg.example" use-default-filters="false">
+	<context:component-scan base-package="net.ngg.example.controller" use-default-filters="false">
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
 	

@@ -30,6 +30,7 @@
   	<mysql.connector.java>5.1.38</mysql.connector.java>
   	<junit.version>4.11</junit.version>
   	<jdk.version>1.7</jdk.version>
+  	<activemq.version>5.13.3</activemq.version>
   </properties>
   
   <dependencies>
@@ -186,6 +187,12 @@
 	    <scope>test</scope>
 	</dependency>
 	 -->
+	 
+	 <dependency>
+	    <groupId>org.apache.activemq</groupId>
+	    <artifactId>activemq-core</artifactId>
+	    <version>5.7.0</version>
+	</dependency>
     
     <dependency>
         <groupId>mysql</groupId>
