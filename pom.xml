@@ -210,7 +210,7 @@
         <groupId>mysql</groupId>
         <artifactId>mysql-connector-java</artifactId>
         <version>${mysql.connector.java}</version>
-        <scope>runtime</scope>
+        <!-- <scope>runtime</scope> -->
     </dependency>
     <dependency>
         <groupId>commons-dbcp</groupId>

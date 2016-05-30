@@ -20,7 +20,7 @@
 		<context:include-filter type="regex" expression="net.ngg.example.*"/>
 	</context:component-scan>
 	<context:property-placeholder
-		location="classpath:jdbc.properties" />
+		location="classpath:application.properties" />
 		
 	<!-- Spring 2.5之前使用 -->
 	<!-- <bean id="propertyConfigurer"

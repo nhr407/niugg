@@ -28,7 +28,7 @@
 	<description>Spring集成的JMS配置</description>
 	
 	<context:property-placeholder
-		location="classpath:jms/jms.properties" />
+		location="classpath:application.properties" />
 	
 	<!-- ActiveMQ Connection Factory -->
 	<bean id="amqConnectionFactory" 
