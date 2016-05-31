@@ -27,6 +27,8 @@
   	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   	<org.springframework.version>3.2.5.RELEASE</org.springframework.version>
   	<hibernate.version>3.6.9.Final</hibernate.version>
+  	<druid.version>1.0.15</druid.version>
+  	<tomcat.jdbc.version>7.0.64</tomcat.jdbc.version>
   	<mysql.connector.java>5.1.38</mysql.connector.java>
   	<junit.version>4.11</junit.version>
   	<jdk.version>1.7</jdk.version>
@@ -212,11 +214,18 @@
         <version>${mysql.connector.java}</version>
         <!-- <scope>runtime</scope> -->
     </dependency>
-    <dependency>
-        <groupId>commons-dbcp</groupId>
-        <artifactId>commons-dbcp</artifactId>
-        <version>1.4</version>
-    </dependency>
+    
+	<dependency>
+	    <groupId>com.alibaba</groupId>
+	    <artifactId>druid</artifactId>
+	    <version>${druid.version}</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.apache.tomcat</groupId>
+	    <artifactId>tomcat-jdbc</artifactId>
+	    <version>${tomcat.jdbc.version}</version>
+	</dependency>
     
     <dependency>
 	    <groupId>commons-lang</groupId>

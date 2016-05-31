@@ -22,20 +22,14 @@
 	<context:property-placeholder
 		location="classpath:application.properties" />
 		
-	<!-- Spring 2.5之前使用 -->
-	<!-- <bean id="propertyConfigurer"
-		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer"
-		p:location="/WEB-INF/jdbc.properties">
-	</bean> -->
-
 	<!-- It resolves a logical view name into a View object that delegates rendering responsibility to a template(usually a JSP)
 		  located in the web application's context. -->
-	<bean id="jspViewResolver" 
+	<!-- <bean id="jspViewResolver" 
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="viewClass" value="org.springframework.web.servlet.view.JstlView" />
 		<property name="prefix" value="/WEB-INF/views/" />
 		<property name="suffix" value=".jsp"/>
-	</bean>
+	</bean> -->
 	
 	<!-- 国际化 -->
 	<bean id="messageSource"
@@ -43,13 +37,14 @@
 		<property name="basename" value="classpath:messages" />
 		<property name="defaultEncoding" value="UTF-8" /></bean>
 	
-	<bean id="dataSource"
+	<!-- <bean id="dataSource"
 		class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"
-		p:driverClassName="${jdbc.driverClassName}"
-		p:url="${jdbc.databaseurl}"
+		p:driverClassName="${jdbc.driver}"
+		p:url="${jdbc.url}"
 		p:username="${jdbc.username}"
 		p:password="${jdbc.password}"></bean>
-
+		 -->
+	<!-- 
 	<bean id="sessionFactory" 
 		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
 		<property name="dataSource" ref="dataSource"></property>
@@ -58,12 +53,9 @@
 				<prop key="hibernate.dialect">${jdbc.dialect}</prop>
 				<prop key="hibernate.show_sql">true</prop>
 				<prop key="hibernate.format_sql">true</prop>
-				<!-- 不同的数据库启动时选择create\update\create-drop \false -->
 				<prop key="hibernate.hbm2ddl.auto">false</prop>
-				<!-- 
 				<prop key="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</prop>
 				<prop key="hibernate.cache.provider_configuration_file_resource_path">/ehcache/ehcache-hibernate-single.xml</prop>
-				 -->
 			</props>
 		</property>
 		<property name="packagesToScan">
@@ -79,9 +71,8 @@
         <property name="sessionFactory" ref="sessionFactory"></property>
     </bean>
     
-    <!-- JSR303 Validator定义 -->
 	<bean id="validator"
 		class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean" />
-    
+     -->
 </beans>
 		   

@@ -15,11 +15,11 @@
 	
 	<!-- JDBC连接 -->
 	<!-- 用Tomcat的jdbc还是换阿里的？ -->
-	<!-- <import resource="jdbc/applicationContext-jdbc.xml"/> -->
+	<import resource="jdbc/applicationContext-jdbc.xml"/>
 	
 	<!-- Persistence -->
 	<!-- 采用hibernate -->
-	<!-- <import resource="persistence/applicationContext-hibernate.xml"/> -->
+	<import resource="persistence/applicationContext-hibernate.xml"/>
 	
 	<!-- 安全配置 -->
 	<!-- Apache Shiro -->
