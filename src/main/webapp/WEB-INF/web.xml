@@ -8,6 +8,10 @@
     <param-name>contextConfigLocation</param-name>
     <param-value>classpath*:/applicationContext*.xml,classpath*:jms/applicationContext-jms.xml</param-value>
   </context-param>
+  <context-param>
+    <param-name>spring.profiles.default</param-name>
+    <param-value>production</param-value>
+  </context-param>
   <servlet>
     <servlet-name>spring</servlet-name>
     <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
