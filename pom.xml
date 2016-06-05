@@ -1,15 +1,15 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
-  <groupId>com.rails</groupId>
-  <artifactId>SpringHibernateIntegration</artifactId>
+  <groupId>org.ngg</groupId>
+  <artifactId>niugg</artifactId>
   <packaging>war</packaging>
   <version>0.0.1-SNAPSHOT</version>
-  <name>SpringHibernateIntegration Maven Webapp</name>
+  <name>SpringHibernateIntegration Maven Webapp niugg</name>
   <url>http://maven.apache.org</url>
   
   <repositories>
-  	<repository>
+  	<!-- <repository>
   		<id>central</id>
   		<name>JBoss Repository</name>
   		<url>http://repository.jboss.com/maven2/</url>
@@ -20,7 +20,7 @@
   			<enabled>true</enabled>
   		</snapshots>
   		<layout>default</layout>
-  	</repository>
+  	</repository> -->
   </repositories>
   
   <properties>
@@ -36,6 +36,14 @@
   </properties>
   
   <dependencies>
+  
+  	<dependency>
+      <groupId>com.sun.xml.ws</groupId>
+      <artifactId>jaxws-rt</artifactId>
+      <version>2.2.10</version>
+	  <scope>runtime</scope>
+    </dependency>
+  
   
 	<!-- Spring 3 dependencies -->
 	<!--
@@ -246,6 +254,19 @@
 		<scope>runtime</scope>
 	</dependency>
 	
+	<!-- jsr 303 -->
+	<dependency>
+	    <groupId>javax.validation</groupId>
+	    <artifactId>validation-api</artifactId>
+	    <version>1.0.0.GA</version>
+	</dependency>
+	
+	<dependency>
+	    <groupId>org.hibernate</groupId>
+	    <artifactId>hibernate-validator</artifactId>
+	    <version>4.2.0.Final</version>
+	</dependency>
+	
 	<dependency>
 		<groupId>taglibs</groupId>
 		<artifactId>standard</artifactId>
@@ -281,7 +302,7 @@
     
   </dependencies>
   <build>
-    <finalName>SpringHibernateIntegration</finalName>
+    <finalName>niugg</finalName>
     <plugins> 
     	<plugin> 
     		<groupId>org.apache.maven.plugins</groupId> 

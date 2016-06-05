@@ -8,6 +8,7 @@
     <param-name>contextConfigLocation</param-name>
     <param-value>classpath*:/applicationContext*.xml,classpath*:jms/applicationContext-jms.xml</param-value>
   </context-param>
+  
   <context-param>
     <param-name>spring.profiles.default</param-name>
     <param-value>production</param-value>
@@ -25,6 +26,22 @@
     <servlet-name>spring</servlet-name>
     <url-pattern>/</url-pattern>
   </servlet-mapping>
+  
+   <listener>
+    <listener-class>com.sun.xml.ws.transport.http.servlet.WSServletContextListener</listener-class>
+  </listener>
+   
+  <servlet>
+    <servlet-name>HelloService</servlet-name>
+    <servlet-class>com.sun.xml.ws.transport.http.servlet.WSServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  
+  <servlet-mapping>
+    <servlet-name>HelloService</servlet-name>
+    <url-pattern>/helloservice</url-pattern>
+  </servlet-mapping>
+  
   <welcome-file-list>
     <welcome-file>/WEB-INF/index.jsp</welcome-file>
   </welcome-file-list>
