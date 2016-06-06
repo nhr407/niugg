@@ -30,7 +30,7 @@
   	<druid.version>1.0.15</druid.version>
   	<tomcat.jdbc.version>7.0.64</tomcat.jdbc.version>
   	<mysql.connector.java>5.1.38</mysql.connector.java>
-  	<junit.version>4.11</junit.version>
+  	<junit.version>4.12</junit.version>
   	<jdk.version>1.7</jdk.version>
   	<activemq.version>5.13.3</activemq.version>
   </properties>
@@ -195,12 +195,27 @@
         <version>${hibernate.version}</version>
     </dependency>
 	
+	<!-- junit and mockito -->
     <dependency>
     	<groupId>junit</groupId>
 		<artifactId>junit</artifactId>
       	<version>${junit.version}</version>
       	<scope>test</scope>
     </dependency>
+    <dependency>
+         <groupId>org.hamcrest</groupId>
+         <artifactId>hamcrest-library</artifactId>
+         <version>1.3</version>
+         <scope>test</scope>
+     </dependency>
+     <dependency>
+         <groupId>org.mockito</groupId>
+         <artifactId>mockito-all</artifactId>
+         <version>1.9.5</version>
+         <scope>test</scope>
+     </dependency>
+     <!-- junit and mockito -->
+     
     <!-- 
 	<dependency>
 	    <groupId>org.assertj</groupId>

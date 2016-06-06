@@ -24,7 +24,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 		employeeDAO.addEmployee(employee);
 		
 		// 发送异步消息(注意，此处无法保证消息发送一致性)
-		mailSendService.sendMail(employee);
+//		mailSendService.sendMail(employee);
 		
 	}
 
