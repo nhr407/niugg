@@ -16,9 +16,10 @@ public class UsingReadWriteLock {
 	public void iterateOnList() {
 		lock.readLock().lock();
 		try {
+			System.out.println(Thread.currentThread().getName() +": "+list.size());
 			for(String s : list) {
 				// do something with s
-				System.out.println(s);
+//				System.out.println(Thread.currentThread().getName() +": "+ s);
 			}
 		}finally {
 			lock.readLock().unlock();
