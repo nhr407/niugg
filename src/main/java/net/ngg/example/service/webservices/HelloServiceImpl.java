@@ -7,7 +7,7 @@ import javax.jws.WebService;
  * Service Implementation
  * Web Service End-point implementation class
  */
-@WebService(endpointInterface = "net.ngg.example.ws.HelloService")
+@WebService(endpointInterface = "net.ngg.example.service.webservices.HelloService")
 public class HelloServiceImpl implements HelloService{
 	public HelloServiceImpl() {}
 	
