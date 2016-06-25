@@ -28,6 +28,14 @@ public class Employee {
     @Column(name="TELEPHONE")
     private String telephone;
     
+    public Employee(){}
+    
+    public Employee(Integer id, String firstname, String lastname) {
+    	this.id = id;
+    	this.firstname = firstname;
+    	this.lastname = lastname;
+    }
+    
 	public Integer getId() {
 		return id;
 	}

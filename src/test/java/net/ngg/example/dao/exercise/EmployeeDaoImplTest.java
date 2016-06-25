@@ -16,7 +16,11 @@ import net.ngg.example.entity.exercise.Employee;
 // DAO层使用集成测试
 // integration testing, 集成测试
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations={"classpath*:applicationContext.xml", "classpath*:applicationContext-web.xml"})
+@ContextConfiguration(locations={
+		"classpath*:applicationContext.xml", 
+		"classpath*:applicationContext-web.xml",
+		"classpath*:jdbc/applicationContext-jdbc.xml",
+		"classpath*:persistence/applicationContext-hibernate.xml"})
 @ActiveProfiles("test")  // Integration Testing with Environment Profiles
 @Transactional
 @TransactionConfiguration(defaultRollback=true)

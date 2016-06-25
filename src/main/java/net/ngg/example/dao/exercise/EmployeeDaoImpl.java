@@ -33,4 +33,10 @@ public class EmployeeDaoImpl implements EmployeeDAO {
 		}
 	}
 
+	@Override
+	public Employee getEmployeeById(Integer employeeId) {
+		Employee employee = (Employee) this.sessionFactory.getCurrentSession().load(Employee.class, employeeId);
+		return employee;
+	}
+
 }
