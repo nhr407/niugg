@@ -50,13 +50,15 @@ public class EmployeeControllerUnitTest {
 
 	@Test
 	public void testGetEmployee() throws Exception {
-		when(employeeService.getEmployee(1)).thenReturn(new Employee(1, "牛", "宏睿"));
+		when(employeeService.getEmployee(1)).thenReturn(new Employee("牛", "宏睿", "nhr407@163.com", "134****0062"));
 		mockMvc.perform(get("/example/employee/{id}", 1))
 			.andExpect(status().isOk())
 			.andExpect(view().name("employeeView"))
 			.andExpect(model().attribute("employeeData", 
-										 AllOf.allOf(hasProperty("id", Is.is(1)),
-										 HasPropertyWithValue.hasProperty("firstname", is("牛")),
-										 hasProperty("lastname", is("宏睿")))));
+										 AllOf.allOf(
+										   HasPropertyWithValue.hasProperty("firstname", is("牛")),
+										   hasProperty("lastname", is("宏睿")),
+										   hasProperty("email", Is.is("nhr407@163.com")),
+										   hasProperty("telephone", Is.is("134****0062")))));
 	}
 }

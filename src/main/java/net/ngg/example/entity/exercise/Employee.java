@@ -30,10 +30,11 @@ public class Employee {
     
     public Employee(){}
     
-    public Employee(Integer id, String firstname, String lastname) {
-    	this.id = id;
+    public Employee(String firstname, String lastname, String email, String telephone) {
     	this.firstname = firstname;
     	this.lastname = lastname;
+    	this.email = email;
+    	this.telephone = telephone;
     }
     
 	public Integer getId() {
