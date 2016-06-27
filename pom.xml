@@ -27,6 +27,7 @@
   	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   	<org.springframework.version>3.2.5.RELEASE</org.springframework.version>
   	<hibernate.version>3.6.9.Final</hibernate.version>
+  	<ehcache.version>2.10.0</ehcache.version>
   	<druid.version>1.0.15</druid.version>
   	<tomcat.jdbc.version>7.0.64</tomcat.jdbc.version>
   	<mysql.connector.java>5.1.38</mysql.connector.java>
@@ -208,6 +209,18 @@
         <artifactId>hibernate-core</artifactId>
         <version>${hibernate.version}</version>
     </dependency>
+    <!-- hibernate二级缓存 -->
+    <dependency>
+	    <groupId>org.hibernate</groupId>
+	    <artifactId>hibernate-ehcache</artifactId>
+	    <version>${hibernate.version}</version>
+	</dependency>
+    <dependency>
+      <groupId>net.sf.ehcache</groupId>
+      <artifactId>ehcache</artifactId>
+      <version>${ehcache.version}</version>
+    </dependency>
+    
 	
 	<!-- junit and mockito -->
     <dependency>

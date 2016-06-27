@@ -1,14 +1,20 @@
 package net.ngg.example.entity.exercise;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+
 @Entity
 @Table(name="employee")
-public class Employee {
+@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+public class Employee implements Serializable{
 	
 	// The @GeneratedValue annotation says that this value will be determined by the datasource, not by the code.
 	@Id

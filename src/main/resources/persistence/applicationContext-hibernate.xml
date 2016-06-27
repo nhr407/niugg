@@ -25,10 +25,9 @@
 				<prop key="hibernate.format_sql">true</prop>
 				<!-- 不同的数据库启动时选择create\update\create-drop \false -->
 				<prop key="hibernate.hbm2ddl.auto">false</prop>
-				<!-- 
+				<prop key="hibernate.cache.use_second_level_cache">true</prop>
 				<prop key="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</prop>
 				<prop key="hibernate.cache.provider_configuration_file_resource_path">/ehcache/ehcache-hibernate-single.xml</prop>
-				 -->
 			</props>
 		</property>
 		<!-- <property name="packagesToScan" value="com.ict.web"/> --><!-- 如果多个，用“,”分隔 -->
