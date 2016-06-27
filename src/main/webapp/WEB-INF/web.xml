@@ -53,6 +53,23 @@
     <url-pattern>/counterservlet</url-pattern>
   </servlet-mapping>
   
+  <filter>
+        <filter-name>AntiSamy filter</filter-name>
+        <filter-class>net.modules.filter.xssfilter.AntiSamyFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>AntiSamy filter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <jsp-config>
+        <taglib>
+            <taglib-uri>http://www.bazageous.com/safeHtml</taglib-uri>
+            <taglib-location>/META-INF/safe-html.tld</taglib-location>
+        </taglib>
+    </jsp-config>
+  
   <welcome-file-list>
     <welcome-file>/WEB-INF/index.jsp</welcome-file>
   </welcome-file-list>
