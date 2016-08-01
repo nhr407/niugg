@@ -1,4 +1,4 @@
-package net.modules.threadstudy.basic;
+package net.modules.threadstudy.basic.deadlock;
 
 public class SimpleDeadLock {
 	
